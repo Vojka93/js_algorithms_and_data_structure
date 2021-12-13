@@ -157,10 +157,17 @@ function power(base, exponent) {
  * product of them all.
  */
 
+function productOfArray(arr) {
+  if (arr.length === 0) {
+    return 1
+  }
+  return arr[0] * productOfArray(arr.slice(1))
+}
+
 function productOfarry(arr) {
   return arr.reduce((total, num) => {
     return total * num
   }, arr[0])
 }
 
-console.log(productOfarry([1,2,3,10]))
+console.log(productOfarry([1, 2, 3, 10]))

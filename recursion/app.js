@@ -150,3 +150,17 @@ function power(base, exponent) {
   // different input
   return base * power(base, exponent - 1)
 }
+
+/**
+ * write a function called productOfArray which
+ * takes in an array of numbers and returns the
+ * product of them all.
+ */
+
+function productOfarry(arr) {
+  return arr.reduce((total, num) => {
+    return total * num
+  }, arr[0])
+}
+
+console.log(productOfarry([1,2,3,10]))

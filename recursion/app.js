@@ -157,13 +157,15 @@ function power(base, exponent) {
  * product of them all.
  */
 
+// productOfArray recursively
 function productOfArray(arr) {
   if (arr.length === 0) {
     return 1
   }
-  return arr[0] * productOfArray(arr.slice(1))
+  return arr[0] * productOfArray(arr.slice(1)) //slice(1) removes the first element
 }
 
+// productOfArray with .reduce method
 function productOfarry(arr) {
   return arr.reduce((total, num) => {
     return total * num

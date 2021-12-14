@@ -159,9 +159,11 @@ function power(base, exponent) {
 
 // productOfArray recursively
 function productOfArray(arr) {
+  // base case
   if (arr.length === 0) {
     return 1
   }
+  // different input
   return arr[0] * productOfArray(arr.slice(1)) //slice(1) removes the first element
 }
 
@@ -172,4 +174,24 @@ function productOfarry(arr) {
   }, arr[0])
 }
 
-console.log(productOfarry([1, 2, 3, 10]))
+productOfarry([1, 2, 3, 10]) // 60
+
+/**
+ * fibonacci
+ *
+ * write a recursive function called fib  which accepts
+ * a number and returns the nth number in the Fibonacci
+ * sequence. Recall that the Fibonacci sequence is the
+ * sequence of whole numbers 1, 1, 2, 3, 5, 8, ... which
+ * starts with 1 and 1, and where every number thereafter
+ * is equal to the sum of the previous two numbers.
+ *
+ * fib(4) // 3
+ */
+
+function fib(num) {
+  if (num <= 2) return 1
+  return fib(num - 1) + fib(num - 2)
+}
+
+fib(4) // 3

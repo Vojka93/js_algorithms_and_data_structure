@@ -195,3 +195,46 @@ function fib(num) {
 }
 
 fib(4) // 3
+
+// Zero is even.
+// One is odd.
+// For any other number N, its evenness is the same as N - 2.
+// Define a recursive function isEven corresponding to this description.
+// The function should accept a single parameter (a positive, whole number)
+// and return a Boolean.
+// console.log(isEven(50)); //true
+// console.log(isEven(75)); // false
+// console.log(isEven(-1)); // ??
+
+function isEven(n) {
+  // base case
+  if (n == 0) return true
+  // base case
+  else if (n == 1) return false
+  // different input
+  else if (n < 0) return isEven(-n)
+  // different input
+  else return isEven(n - 2)
+}
+
+console.log(isEven(-1))
+
+/**
+ * countChar
+ *
+ * write a function that takes a string and a char arguments
+ * and returns a number that indicates how many of thatcharacters
+ * are there are in the string.
+ */
+
+function countChar(str, char) {
+  let count = 0
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      count++
+    }
+  }
+  return count
+}
+
+console.log(countChar('roflmaoklel', 'o')) // 2

@@ -20,11 +20,11 @@
 // )
 
 /**
- * Bubble sort (not really efficent)
+ * bubble sort (not really efficent)
  *
  * sorthing algorithm where the largest values bubble up to the top
  * 
- * Big O Complexity: O(n^2)
+ * Big O: O(n^2)
  */
 
 function bubbleSort(arr) {

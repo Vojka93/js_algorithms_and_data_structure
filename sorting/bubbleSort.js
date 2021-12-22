@@ -24,7 +24,7 @@
  *
  * sorthing algorithm where the largest values bubble up to the top
  * 
- * Big O: O(n^2)
+ * Time Complexity (Average and Worst): O(n^2)
  */
 
 function bubbleSort(arr) {

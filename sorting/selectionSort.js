@@ -5,7 +5,7 @@
  * placing larger values into sorted position, it
  * places small values into sorted position
  *
- * Big O: O(n^2)
+ * Time Complexity (Average and Worst): O(n^2)
  */
 
 function selectionSort(arr) {

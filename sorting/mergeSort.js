@@ -5,10 +5,11 @@
 
 /**
  *
- * merge sort → combination of merging (arrays) and sorting
+ * merge sort → combination of merging (arrays) and sorting. (divide and conquer)
  * exploints the fact that arrays of 0 or 1 are allways sorted
  *
- *  Time Complexity (Average and Worst): O(n log n) 
+ *
+ *  Time Complexity (Average and Worst): O(n log n)
  *  Space complexity: O(n)
  */
 
@@ -39,8 +40,10 @@ function merge(arr1, arr2) {
 
 // recursive merge sort
 function mergeSort(arr) {
+  // base case
   if (arr.length <= 1) return arr
   let mid = Math.floor(arr.length / 2)
+  // recursevly invoking mergeSort with different input
   let left = mergeSort(arr.slice(0, mid))
   let right = mergeSort(arr.slice(mid))
   return merge(left, right)

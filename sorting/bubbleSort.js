@@ -48,3 +48,10 @@ function bubbleSort(arr) {
 }
 
 console.log(bubbleSort([23, 45, 6, 12, 13]))
+
+
+function swap(arr, i, j) {
+  let temp = arr[i]
+  arr[i] = arr[j]
+  arr[j] = temp
+}

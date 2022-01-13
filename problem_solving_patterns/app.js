@@ -73,6 +73,23 @@ function anagram(first, second) {
   return true
 }
 
+// anagram with .split .sort. join
+function anagram(a, b) {
+  let len1 = a.length
+  let len2 = b.length
+  if (len1 !== len2) {
+    console.log('Invalid Input')
+    return
+  }
+  let str1 = a.split('').sort().join('')
+  let str2 = b.split('').sort().join('')
+  if (str1 === str2) {
+    console.log('True')
+  } else {
+    console.log('False')
+  }
+}
+
 //anagram('cinema', 'iceman')
 
 /**
@@ -261,4 +278,22 @@ function chessBoard(width, height) {
   console.log(chessBoard)
 }
 
-chessBoard(16, 8)
+// chessBoard(16, 8)
+
+// given a string, construct an object that has its keys of the string
+// letters and as values the number of times that letter is present in the string
+const fromStrToObj = (str) => {
+  const counter = {}
+
+  for (let i = 0; i < str.length; i++) {
+    let letter = str[i]
+
+    counter[letter] ? counter[letter] += 1 : counter[letter] = 1
+    
+  }
+
+  return counter
+
+}
+
+console.log(fromStrToObj('bananaaaa'))
